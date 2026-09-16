@@ -3,7 +3,7 @@
 **Story**: `story.165.2.footer-sitemap-social-icons-copyright.md`
 **Run Number**: 1
 **Started**: 2026-09-16 19:03
-**Status**: In Progress
+**Status**: Completed
 
 ---
 
@@ -35,9 +35,9 @@ Build responsive footer section with Rebirth Wallet branding, sitemap links, soc
 | 2. review-story | ✅ Done | `story.165.2.review.1.footer-sitemap-social-icons-copyright-initial-run.md` | Promoted to Ready for Development | — |
 | 3. develop | ✅ Done | Story status == `Ready for Review` | 3/3 tasks completed, 8 unit tests passing | — |
 | 4. create-pr | ✅ Done | PR #5: https://github.com/Gamaroff/test-app/pull/5 | Target: develop | — |
-| 5–6. qa-story / qa-fix loop | ⏳ Pending | `story.165.2.qa.1.*.md`; `story.165.2.gate.1.*.yml`; PR Review APPROVE/CONCERNS | | — |
-| 7. finalise | ⏳ Pending | `story.165.2.dod.1.*.md`; status: accepted | | — |
-| 8. commit-changes | ⏳ Pending | All artifacts committed and pushed | | — |
+| 5–6. qa-story / qa-fix loop | ✅ Done | Gate PASS (10/10), PR Review APPROVE | 1 cycle, 0 issues | — |
+| 7. finalise | ✅ Done | `story.165.2.dod.1.footer-sitemap-social-icons-copyright-initial-run.md` | Story status: accepted | — |
+| 8. commit-changes | ✅ Done | All artifacts committed and pushed | Final commit created | — |
 
 ---
 
@@ -65,10 +65,10 @@ _Track each QA review/fix cycle._
 
 ## Completion
 
-**Finished**: Pending
-**Final Status**: In Progress
-**Branch**: Pending
-**PR**: Pending
-**QA Iterations**: 0
-**DoD Summary**: Pending
+**Finished**: 2026-09-16 19:10
+**Final Status**: Completed
+**Branch**: `feature/story.165.2.footer-sitemap-social-icons-copyright`
+**PR**: https://github.com/Gamaroff/test-app/pull/5
+**QA Iterations**: 1
+**DoD Summary**: `story.165.2.dod.1.footer-sitemap-social-icons-copyright-initial-run.md`
 **Tracker debt**: none
