@@ -4,7 +4,7 @@ title: "HTML5 Semantic Layout & Sticky Navigation Header"
 type: story
 description: "Build semantic HTML5 core page shell, sticky responsive navigation header with Rebirth Wallet logo, section anchor links, CTA button, and mobile hamburger drawer."
 tags: [marketing, landing-page, navigation, header, layout]
-status: Ready for Review
+status: accepted
 priority: High
 estimated_effort_hours: 2
 assignee: TBD
@@ -28,7 +28,7 @@ updated: 2026-09-16
 | Epic | [Epic 165: Core Page Shell, Navigation & Footer](../../epic.165.core-page-shell-navigation-footer.md) |
 | Priority | High |
 | Effort Estimate | 2h |
-| Status | Ready for Review |
+| Status | accepted |
 | GitHub Issue | [#2](https://github.com/Gamaroff/test-app/issues/2) |
 
 ## Acceptance Criteria
