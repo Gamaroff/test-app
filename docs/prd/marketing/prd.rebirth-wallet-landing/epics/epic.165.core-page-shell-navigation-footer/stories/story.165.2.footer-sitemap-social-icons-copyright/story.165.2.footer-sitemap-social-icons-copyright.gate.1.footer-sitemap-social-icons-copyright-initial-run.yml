@@ -1,0 +1,22 @@
+schema_version: "1.0"
+story_id: "165.2"
+story_file: "story.165.2.footer-sitemap-social-icons-copyright.md"
+review_date: "2026-09-16"
+gate_decision: "PASS"
+score: 10
+ac_coverage:
+  total: 2
+  passed: 2
+  failed: 0
+top_issues: []
+nfr_validation:
+  security:
+    status: "PASS"
+  performance:
+    status: "PASS"
+  accessibility:
+    status: "PASS"
+  maintainability:
+    status: "PASS"
+recommendations:
+  future: []

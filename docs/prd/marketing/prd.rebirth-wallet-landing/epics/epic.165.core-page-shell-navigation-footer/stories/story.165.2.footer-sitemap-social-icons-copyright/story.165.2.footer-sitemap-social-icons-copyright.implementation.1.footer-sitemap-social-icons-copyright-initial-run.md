@@ -34,7 +34,7 @@ Build responsive footer section with Rebirth Wallet branding, sitemap links, soc
 | 1. create-story-branch | ✅ Done | Branch `feature/story.165.2.footer-sitemap-social-icons-copyright` created at `85347cd` | | — |
 | 2. review-story | ✅ Done | `story.165.2.review.1.footer-sitemap-social-icons-copyright-initial-run.md` | Promoted to Ready for Development | — |
 | 3. develop | ✅ Done | Story status == `Ready for Review` | 3/3 tasks completed, 8 unit tests passing | — |
-| 4. create-pr | ⏳ Pending | PR URL targets `develop` | | — |
+| 4. create-pr | ✅ Done | PR #5: https://github.com/Gamaroff/test-app/pull/5 | Target: develop | — |
 | 5–6. qa-story / qa-fix loop | ⏳ Pending | `story.165.2.qa.1.*.md`; `story.165.2.gate.1.*.yml`; PR Review APPROVE/CONCERNS | | — |
 | 7. finalise | ⏳ Pending | `story.165.2.dod.1.*.md`; status: accepted | | — |
 | 8. commit-changes | ⏳ Pending | All artifacts committed and pushed | | — |
