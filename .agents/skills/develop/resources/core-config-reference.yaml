@@ -1,0 +1,24 @@
+# Core Configuration Reference
+# This is a reference showing the structure and purpose of each configuration key.
+# Always read the actual configuration from skills-config.yaml at project root.
+#
+# Resolve paths first:
+#   source shared/resources/resolve-paths.sh
+#   # exports PRD_ROOT (default: docs/prd) and ARCH_ROOT (default: docs/architecture)
+
+prd:
+  prdShardedLocation: docs/prd  # ${PRD_ROOT} — configurable
+
+architecture:
+  architectureShardedLocation: docs/architecture  # ${ARCH_ROOT} — configurable
+
+devLoadAlwaysFiles: # Files to load on dev agent activation
+  - docs/architecture/concepts/coding-standards.md
+  - docs/architecture/concepts/tech-stack.md
+  - docs/architecture/concepts/source-tree.md
+
+
+# Usage Examples (substitute ${PRD_ROOT} / ${ARCH_ROOT} for the literals shown):
+# - Epic files:  ${PRD_ROOT}/{domain}/{feature}/epics/epic.{N}.{name}/epic.{N}.{name}.md
+# - Story files: {epic-directory}/stories/story.{E}.{S}.{name}/story.{E}.{S}.{name}.md
+# - QA artifacts: co-located with the story file (no qa.qaLocation key)

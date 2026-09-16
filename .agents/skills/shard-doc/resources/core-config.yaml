@@ -1,0 +1,13 @@
+# PRD and architecture roots are configurable; nested structure under each
+# root is fixed. Resolve via: source shared/resources/resolve-paths.sh
+
+prd:
+  prdShardedLocation: docs/prd  # ${PRD_ROOT}
+
+architecture:
+  architectureShardedLocation: docs/architecture  # ${ARCH_ROOT}
+
+devLoadAlwaysFiles:
+  - docs/architecture/concepts/coding-standards.md
+  - docs/architecture/concepts/tech-stack.md
+  - docs/architecture/concepts/source-tree.md

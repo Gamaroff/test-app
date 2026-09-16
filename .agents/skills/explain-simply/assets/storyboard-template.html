@@ -1,0 +1,361 @@
+<title>Topic Name</title>
+
+<style>
+  /* ---- tokens ----------------------------------------------------------
+     PLACEHOLDER GREYSCALE. Replace every value below before publishing.
+
+     These are deliberately colourless so an unfinished page looks
+     unfinished. A palette shipped in a template is a palette nobody
+     chooses, and the warm-cream-plus-amber default is one of the looks
+     `artifact-design` names as the generated-page tell.
+
+     Pick the palette from the topic's own world — the materials, surfaces
+     and inks the subject is actually made of. Keep the token NAMES: the
+     SVG idioms and the panel CSS both read them.
+
+       --es-accent    a light FILL. Dark ink text sits on it in light mode,
+                      so it must stay pale there and go dark in dark mode.
+       --es-accent-2  a saturated STROKE/mark colour. Must read on both
+                      grounds; it is the one place to spend boldness.
+       --es-muted     secondary bars and diagram labels. Give it a slight
+                      hue bias toward the accent — a pure grey reads as
+                      unconsidered.
+     -------------------------------------------------------------------- */
+  :root {
+    --es-bg: #f4f4f4;
+    --es-panel: #ffffff;
+    --es-ink: #1c1c1c;
+    --es-fill: #e4e4e4;
+    --es-accent: #d6d6d6;
+    --es-accent-2: #6b6b6b;
+    --es-muted: #9a9a9a;
+    --es-rule: #dcdcdc;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --es-bg: #141414;
+      --es-panel: #1c1c1c;
+      --es-ink: #f0f0f0;
+      --es-fill: #292929;
+      --es-accent: #333333;
+      --es-accent-2: #a8a8a8;
+      --es-muted: #6a6a6a;
+      --es-rule: #272727;
+    }
+  }
+  :root[data-theme="dark"] {
+    --es-bg: #141414;
+    --es-panel: #1c1c1c;
+    --es-ink: #f0f0f0;
+    --es-fill: #292929;
+    --es-accent: #333333;
+    --es-accent-2: #a8a8a8;
+    --es-muted: #6a6a6a;
+    --es-rule: #272727;
+  }
+
+  body {
+    background: var(--es-bg);
+    color: var(--es-ink);
+    /* Placeholder stack. Captions are the largest thing on the page, so the
+       face carries it — pair a display face for .es-caption with a plain one
+       for labels and the note. Google Fonts is the one host the CSP allows;
+       always leave a real fallback stack behind it. */
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      Arial,
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    counter-reset: panel;
+  }
+
+  .es-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* ---- cover ---- */
+  .es-cover {
+    min-height: min(70vh, 620px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 0;
+  }
+  .es-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--es-muted);
+    margin: 0;
+  }
+  .es-cover h1 {
+    font-size: clamp(2.5rem, 9vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .es-lede {
+    font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+    color: var(--es-muted);
+    margin: 0;
+    max-width: 26ch;
+  }
+
+  /* ---- panels ---- */
+  .es-panel {
+    min-height: min(88vh, 760px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 2.75rem);
+    padding: 3rem 0;
+    border-top: 1px solid var(--es-rule);
+    text-align: center;
+  }
+  .es-panel::before {
+    counter-increment: panel;
+    content: counter(panel, decimal-leading-zero);
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    color: var(--es-muted);
+  }
+  .es-svg {
+    width: min(560px, 90vw);
+    height: auto;
+    display: block;
+    overflow: visible;
+  }
+  .es-caption {
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    margin: 0;
+    max-width: 20ch;
+    text-wrap: balance;
+  }
+
+  /* ---- the detail layer: caption stays the picture book, this is the manual ---- */
+  .es-detail {
+    max-width: 62ch;
+    text-align: left;
+    border-top: 1px solid var(--es-rule);
+    padding-top: 1rem;
+    width: 100%;
+  }
+  .es-detail > summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--es-muted);
+    padding: 0.25rem 0;
+  }
+  .es-detail > summary::-webkit-details-marker {
+    display: none;
+  }
+  .es-detail > summary::before {
+    content: "▸ ";
+    display: inline-block;
+    color: var(--es-accent-2);
+  }
+  .es-detail[open] > summary::before {
+    content: "▾ ";
+  }
+  .es-detail > summary:focus-visible,
+  .es-toggle:focus-visible {
+    outline: 2px solid var(--es-accent-2);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  .es-detail p {
+    color: var(--es-ink);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0.5rem 0 0;
+  }
+  .es-detail code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.92em;
+    background: var(--es-fill);
+    border-radius: 4px;
+    padding: 0.1em 0.35em;
+  }
+
+  /* ---- floating toggle: reachable from anywhere in the scroll ---- */
+  .es-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--es-ink);
+    background: var(--es-panel);
+    border: 1px solid var(--es-rule);
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    cursor: pointer;
+  }
+  @media (max-width: 640px) {
+    .es-toggle {
+      top: auto;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+
+  /* ---- closing note (use for "the analogy breaks here") ---- */
+  .es-note {
+    border-top: 1px solid var(--es-rule);
+    padding: 3rem 0 5rem;
+    color: var(--es-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 40ch;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+</style>
+
+<button class="es-toggle" type="button" hidden>Show the detail</button>
+
+<div class="es-page">
+  <header class="es-cover">
+    <p class="es-eyebrow">Explain simply</p>
+    <h1>Topic Name</h1>
+    <p class="es-lede">One short line. What this is about.</p>
+  </header>
+
+  <!-- PANEL 1 — the hook: what this thing is -->
+  <section class="es-panel">
+    <svg viewBox="0 0 480 320" role="img" class="es-svg">
+      <title>A small note sealed inside an envelope</title>
+      <defs>
+        <!-- shared arrowhead: defined once, reused by every later panel -->
+        <marker
+          id="ar"
+          viewBox="0 0 10 10"
+          refX="8"
+          refY="5"
+          markerWidth="5"
+          markerHeight="5"
+          orient="auto-start-reverse"
+        >
+          <path d="M0 0 L10 5 L0 10 z" fill="var(--es-ink)" />
+        </marker>
+      </defs>
+      <rect
+        x="40"
+        y="50"
+        width="400"
+        height="230"
+        rx="24"
+        fill="var(--es-fill)"
+        stroke="var(--es-ink)"
+        stroke-width="6"
+      />
+      <rect
+        x="150"
+        y="120"
+        width="180"
+        height="100"
+        rx="16"
+        fill="var(--es-accent)"
+        stroke="var(--es-ink)"
+        stroke-width="6"
+      />
+      <text
+        x="240"
+        y="178"
+        text-anchor="middle"
+        font-size="24"
+        font-weight="600"
+        fill="var(--es-ink)"
+      >
+        your note
+      </text>
+    </svg>
+    <p class="es-caption">Your words go inside a sealed envelope.</p>
+    <!-- One per panel. Add `open` to every one at deep depth, none at peek/standard. -->
+    <details class="es-detail">
+      <summary>the real version</summary>
+      <p>
+        A sentence or three from the Step 2 grown-up answer — the real names,
+        the exact values, the caveat the caption had to drop. Never the place to
+        park meaning the caption should have carried.
+      </p>
+    </details>
+  </section>
+
+  <!-- PANEL 2 — copy the block above. One idea. Twelve words, maximum. -->
+  <!-- PANEL 3 … -->
+  <!-- 6 to 10 panels total: hook, 3-6 middles in causal order, payoff. -->
+
+  <!-- Optional. Delete unless the analogy breaks somewhere that matters. -->
+  <p class="es-note">Real envelopes can be steamed open. This one cannot.</p>
+</div>
+
+<script>
+  // Progressive enhancement only: the button is hidden until this runs, and every
+  // <summary> stays independently clickable whether or not it does.
+  (function () {
+    var btn = document.querySelector(".es-toggle");
+    var items = document.querySelectorAll(".es-detail");
+    if (!btn || !items.length) return;
+    btn.hidden = false;
+
+    // Storage throws outright in some contexts (thumbnail capture, blocked site
+    // data), so every access is guarded and the page works with none of it.
+    function read() {
+      try {
+        return localStorage.getItem("es-detail");
+      } catch (e) {
+        return null;
+      }
+    }
+    function write(v) {
+      try {
+        localStorage.setItem("es-detail", v);
+      } catch (e) {
+        /* no-op */
+      }
+    }
+
+    // The authored markup sets the default (deep ships them open); a stored
+    // choice from a previous visit overrides it.
+    var shown = items[0].hasAttribute("open");
+    var saved = read();
+    if (saved === "on") shown = true;
+    else if (saved === "off") shown = false;
+
+    function apply() {
+      for (var i = 0; i < items.length; i++) items[i].open = shown;
+      btn.textContent = shown ? "Hide the detail" : "Show the detail";
+      btn.setAttribute("aria-pressed", String(shown));
+    }
+    apply();
+
+    btn.addEventListener("click", function () {
+      shown = !shown;
+      write(shown ? "on" : "off");
+      apply();
+    });
+  })();
+</script>

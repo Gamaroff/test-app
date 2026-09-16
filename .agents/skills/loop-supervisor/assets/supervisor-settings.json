@@ -1,0 +1,35 @@
+{
+  "$comment": "Pinned settings for every loop-supervisor iteration. Passed as `claude --settings`, so an unattended run does not inherit whatever the operator's local settings happen to say today. Permission mode is acceptEdits: NOT plan mode (which has killed 4 of 5 pipelines in a live batch — a planning agent asks and then waits, and nobody is there to answer), and NOT --dangerously-skip-permissions (an unattended loop with no approval boundary at all is not a tradeoff worth making for the same outcome).",
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(node:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run bundle:*)",
+      "Bash(npm run generate-catalog:*)",
+      "Bash(npm run format:*)",
+      "Bash(python3:*)",
+      "Bash(bash:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(sed:*)",
+      "Bash(mkdir:*)",
+      "Bash(jq:*)",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep"
+    ],
+    "deny": [
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(rm -rf /:*)"
+    ]
+  }
+}

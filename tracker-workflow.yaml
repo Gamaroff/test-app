@@ -1,0 +1,42 @@
+# tracker-workflow.yaml — GENERATED FROM A TEMPLATE, NOT FROM YOUR BOARD.
+#
+# Full reference:   docs/reference/tracker-workflow.md
+# Annotated sample: docs/examples/tracker-workflow.default.yaml
+#
+# Edit `statuses:` to your board's columns, IN BOARD ORDER, then point each
+# moment at the column it should move a card to. Check your work with:
+#
+#   node .agents/skills/develop-task/references/gh-stage.js --probe-board
+#   node .agents/skills/develop-task/references/jira-stage.js --print-plan --stage work-started
+#   node .agents/skills/develop-task/references/gh-stage.js --check      # in CI
+
+# The ladder, in board order. Order IS the workflow: a rung's index is its rank,
+# and the rungs between two positions are the path from one to the other.
+statuses:
+  - Backlog
+  - In Progress
+  - In Review
+  - Done
+
+# Which status each pipeline moment targets. Omit a moment to disable it —
+# omission is the only way to switch one off. A status named here but absent
+# from `statuses:` above is an off-ladder side-state, entered directly.
+pipeline:
+  work-started: In Progress
+  in-review: In Review
+  done: Done
+  # in-qa: ...              # ← add the column and the line together
+  # ready-for-merge: ...
+  # blocked: Blocked        # ← off-ladder side-state
+  # changes-requested: ...  # ← fires once per QA fix cycle; keep it OFF `statuses:`
+  # pr-merged: ...          # ← fires after the PR merges, from /develop-next
+
+# Local document status -> board status, for the /sync-* skills.
+documentStatus:
+  draft: Backlog
+  planned: Backlog
+  ready-for-development: Backlog
+  in-progress: In Progress
+  ready-for-review: In Review
+  accepted: Done
+  cancelled: Done

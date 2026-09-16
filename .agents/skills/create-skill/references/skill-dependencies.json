@@ -1,0 +1,222 @@
+{
+  "agent-md-refactor": [],
+  "analyst": [],
+  "api-endpoint-validator": [],
+  "architect": [],
+  "autoskill": [],
+  "book-typesetter-pro": [],
+  "brainstorming": [],
+  "brownfield-prd-template": [],
+  "browser-use": [],
+  "building-components": [],
+  "change-checklist": [],
+  "change-management": [],
+  "code-smell-validator": [],
+  "command-development": [],
+  "commit-changes": [],
+  "correct-course": [],
+  "create-architecture-doc": [],
+  "create-branch": [],
+  "create-bug-report": [],
+  "create-doc": [],
+  "create-epic": [
+    "epic-registry-manager",
+    "mermaid-architect"
+  ],
+  "create-epics-from-shards": [],
+  "create-frontend-spec": [],
+  "create-issue": [],
+  "create-parallel-stories": [],
+  "create-pr": [
+    "commit-changes"
+  ],
+  "create-prd": [
+    "brownfield-prd-template",
+    "create-doc",
+    "mermaid-architect",
+    "pm-checklist",
+    "prd-template"
+  ],
+  "create-research-prompt": [],
+  "create-skill": [],
+  "create-story": [
+    "ensure-epic-github-issue",
+    "ensure-epic-jira-issue",
+    "ensure-story-github-issue",
+    "ensure-story-jira-issue",
+    "mermaid-architect"
+  ],
+  "create-task": [
+    "ensure-task-github-issue",
+    "ensure-task-jira-issue",
+    "mermaid-architect"
+  ],
+  "deep-research-prompt": [],
+  "deploy-remote": [],
+  "develop": [
+    "qa-planning"
+  ],
+  "develop-batch": [
+    "develop-bug",
+    "develop-story",
+    "develop-task"
+  ],
+  "develop-bug": [
+    "commit-changes",
+    "create-branch",
+    "create-pr",
+    "develop",
+    "ensure-bug-github-issue",
+    "ensure-bug-jira-issue",
+    "finalise",
+    "qa-fix",
+    "review-bug"
+  ],
+  "develop-next": [
+    "develop-bug",
+    "develop-story",
+    "develop-task"
+  ],
+  "develop-story": [
+    "commit-changes",
+    "create-branch",
+    "create-pr",
+    "develop",
+    "finalise",
+    "qa-fix",
+    "qa-story",
+    "review-pr",
+    "review-story"
+  ],
+  "develop-task": [
+    "commit-changes",
+    "create-branch",
+    "create-pr",
+    "develop",
+    "finalise",
+    "qa-fix",
+    "qa-task",
+    "review-pr",
+    "review-task"
+  ],
+  "docker": [],
+  "document-existing-project": [],
+  "documentation-standards-validator": [],
+  "double-check": [],
+  "edit-epic": [],
+  "edit-story": [],
+  "enforce-standards": [],
+  "ensure-bug-github-issue": [],
+  "ensure-bug-jira-issue": [
+    "sync-jira-bug"
+  ],
+  "ensure-epic-github-issue": [],
+  "ensure-epic-jira-issue": [
+    "sync-jira-epic"
+  ],
+  "ensure-story-github-issue": [],
+  "ensure-story-jira-issue": [
+    "sync-jira-story"
+  ],
+  "ensure-task-github-issue": [],
+  "ensure-task-jira-issue": [
+    "sync-jira-task"
+  ],
+  "epic-registry-manager": [],
+  "error-handling-enforcer": [],
+  "execute-architect-checklist": [],
+  "execute-checklist": [],
+  "explain-simply": [],
+  "extract": [],
+  "finalise": [],
+  "find-skills": [],
+  "generate-ui-prompt": [],
+  "git-time-travel": [],
+  "harden": [],
+  "humaniser": [],
+  "humanize-text": [],
+  "jira-epic-creator": [],
+  "jira-sprint-manager": [],
+  "jira-sprint-retrospective": [],
+  "jira-sprint-review-prep": [],
+  "jira-standup-auditor": [],
+  "loop-supervisor": [
+    "develop-next"
+  ],
+  "markdown-wireframe": [],
+  "mermaid-architect": [],
+  "navigation-pattern-validator": [],
+  "nestjs-debug": [],
+  "nestjs-patterns": [],
+  "new-product-prd": [],
+  "observe-work": [
+    "create-skill"
+  ],
+  "offline-first-enforcer": [],
+  "optimize": [],
+  "performance-optimizer": [],
+  "platform-separation-validator": [],
+  "pm-checklist": [],
+  "pm-coordinator": [],
+  "po": [],
+  "prd-template": [],
+  "qa-fix": [],
+  "qa-gate": [],
+  "qa-planning": [],
+  "qa-story": [],
+  "qa-task": [],
+  "railway-postgres-crud": [],
+  "react-native-debug": [],
+  "remember-insight": [],
+  "research-prompt": [],
+  "response-envelope-enforcer": [],
+  "review-bug": [
+    "create-branch"
+  ],
+  "review-code": [],
+  "review-epic": [
+    "create-branch",
+    "mermaid-architect"
+  ],
+  "review-pr": [],
+  "review-prd": [
+    "mermaid-architect"
+  ],
+  "review-security": [],
+  "review-story": [
+    "create-branch",
+    "ensure-epic-github-issue",
+    "ensure-epic-jira-issue",
+    "ensure-story-github-issue",
+    "ensure-story-jira-issue",
+    "mermaid-architect"
+  ],
+  "review-task": [
+    "create-branch",
+    "ensure-task-github-issue",
+    "ensure-task-jira-issue",
+    "mermaid-architect",
+    "sync-jira-task"
+  ],
+  "scaffold-tracker-workflow": [],
+  "server-admin": [],
+  "shard-doc": [],
+  "shard-prd": [],
+  "sync-github-bug": [],
+  "sync-github-epic": [],
+  "sync-github-story": [],
+  "sync-github-task": [],
+  "sync-jira-bug": [],
+  "sync-jira-epic": [],
+  "sync-jira-story": [],
+  "sync-jira-task": [],
+  "tech-debt-audit": [],
+  "test-co-location-enforcer": [],
+  "test-it": [],
+  "testing-setup-nestjs": [],
+  "testing-setup-react-native": [],
+  "testing-setup-shared": [],
+  "tracker-reconcile": [],
+  "use-railway": [],
+  "ux-expert": []
+}

@@ -1,0 +1,113 @@
+# QA Gate Template Reference
+# This is a reference showing the structure of QA gate files
+
+# Gate files are created by QA and read by developers using qa-fix skill
+# Location: {qa_root}/gates/{epic}.{story}-{story_slug}.yml
+
+# Required fields
+schema: 1
+story: "2.2" # Format: {epic}.{story}
+story_title: "Example Story Title"
+gate: "CONCERNS" # PASS|CONCERNS|FAIL|WAIVED
+status_reason: "Missing test coverage for AC2 and AC4, rate limiting needed"
+reviewer: "Quinn (Test Architect)"
+updated: "2025-01-12T15:30:00Z" # ISO 8601 timestamp
+
+# Waiver (only active when gate is WAIVED)
+waiver:
+  active: false # Set to true when gate is WAIVED
+  # When active:
+  # reason: "Accepted for MVP release - will address in next sprint"
+  # approved_by: "Product Owner"
+
+# Issues - Prioritized list for developer action
+top_issues:
+  - id: "TEST-001"
+    severity: high # ONLY: low|medium|high
+    finding: "Missing integration tests for auth flow"
+    suggested_action: "Add test coverage for login/logout/session flows"
+  - id: "SEC-001"
+    severity: medium
+    finding: "No rate limiting on login endpoint"
+    suggested_action: "Add rate limiting middleware before production"
+
+# Risk summary (from risk-profile task if run)
+risk_summary:
+  totals:
+    critical: 0
+    high: 1
+    medium: 2
+    low: 3
+  recommendations:
+    must_fix:
+      - "Add authentication tests (HIGH risk)"
+      - "Implement rate limiting (MEDIUM risk)"
+    monitor:
+      - "Monitor error rates post-deployment"
+      - "Track performance metrics"
+
+# Optional extended fields
+
+# Evidence of review
+evidence:
+  tests_reviewed: 15
+  risks_identified: 6
+  trace:
+    ac_covered: [1, 3] # AC numbers with test coverage
+    ac_gaps: [2, 4] # AC numbers lacking coverage
+
+# NFR validation results
+nfr_validation:
+  security:
+    status: CONCERNS # PASS|CONCERNS|FAIL
+    notes: "Rate limiting missing, authentication tests incomplete"
+  performance:
+    status: PASS
+    notes: "Load tests show acceptable response times"
+  reliability:
+    status: CONCERNS
+    notes: "Error handling needs improvement"
+  maintainability:
+    status: PASS
+    notes: "Code follows project standards"
+
+# Test design coverage gaps
+test_design:
+  coverage_gaps:
+    - scenario: "Back action behavior (AC2)"
+      priority: P0
+      suggested_tests: "Add test for Toolkit Menu Back returning to Main Menu"
+    - scenario: "Centralized dependencies (AC4)"
+      priority: P0
+      suggested_tests: "Add static analysis test verifying deps.ts usage"
+
+# History (append-only audit trail)
+history:
+  - at: "2025-01-12T10:00:00Z"
+    gate: FAIL
+    note: "Initial review - missing tests and rate limiting"
+  - at: "2025-01-12T15:30:00Z"
+    gate: CONCERNS
+    note: "Some tests added but coverage gaps remain"
+
+# Recommendations
+recommendations:
+  immediate: # Must fix before production
+    - action: "Add authentication flow integration tests"
+      refs: ["src/auth/login.service.ts", "src/auth/session.service.ts"]
+    - action: "Implement rate limiting on auth endpoints"
+      refs: ["api/auth/login.ts:42-68"]
+  future: # Can be addressed later
+    - action: "Consider caching for better performance"
+      refs: ["services/data.service.ts"]
+    - action: "Add more comprehensive error logging"
+      refs: ["utils/error-handler.ts"]
+
+# Developer Action Priority Order (from qa-fix skill):
+# 1. High severity top_issues
+# 2. NFR FAIL statuses → then CONCERNS
+# 3. Test design coverage_gaps (P0 first)
+# 4. Trace uncovered requirements (ac_gaps)
+# 5. Risk must_fix recommendations
+# 6. Medium severity issues
+# 7. Low severity issues
