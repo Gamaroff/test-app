@@ -1,0 +1,18 @@
+schema: 1.0.0
+story_id: "165.1"
+cycle: 1
+verdict: PASS
+score: 100
+top_issues: []
+recommendations:
+  future:
+    - "Consider adding automated Lighthouse CI accessibility check in build pipeline."
+nfr_validation:
+  security:
+    status: PASS
+  performance:
+    status: PASS
+  accessibility:
+    status: PASS
+waiver:
+  active: false

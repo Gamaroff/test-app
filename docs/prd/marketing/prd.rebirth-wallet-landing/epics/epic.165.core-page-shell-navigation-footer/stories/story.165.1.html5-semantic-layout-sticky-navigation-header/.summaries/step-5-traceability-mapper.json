@@ -1,0 +1,8 @@
+{
+  "step": "step-5-traceability-mapper",
+  "story_id": "165.1",
+  "generated_at": "2026-09-16T18:48:43Z",
+  "matrix_path": "docs/prd/marketing/prd.rebirth-wallet-landing/epics/epic.165.core-page-shell-navigation-footer/stories/story.165.1.html5-semantic-layout-sticky-navigation-header/.summaries/qa-traceability-matrix.md",
+  "ac_mapped": 3,
+  "coverage_summary": "AC1: full, AC2: full, AC3: partial"
+}

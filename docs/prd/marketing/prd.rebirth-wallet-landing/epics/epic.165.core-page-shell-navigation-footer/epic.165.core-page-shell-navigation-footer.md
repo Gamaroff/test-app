@@ -42,8 +42,8 @@ Establish the semantic HTML5 core page shell, sticky responsive navigation heade
 
 | Story | Status | Priority | Description |
 | ----- | ------ | -------- | ----------- |
-| 165.1 | 📝 Draft | High | HTML5 Semantic Layout & Sticky Navigation Header |
-| 165.2 | ❌ Not Started | Medium | Footer Sitemap, Social Icons & Copyright Section |
+| 165.1 | ✅ Done | High | HTML5 Semantic Layout & Sticky Navigation Header |
+| 165.2 | 📝 Draft | Medium | Footer Sitemap, Social Icons & Copyright Section |
 
 ### Story 165.1: HTML5 Semantic Layout & Sticky Navigation Header
 
@@ -114,8 +114,8 @@ So that I can access community channels and legal terms.
 
 **Story Completion**:
 
-- Story 165.1: 📝 Draft
-- Story 165.2: ❌ Not Started
+- Story 165.1: ✅ Done
+- Story 165.2: 📝 Draft
 
 ## Change Log
 
