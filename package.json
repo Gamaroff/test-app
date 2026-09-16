@@ -5,7 +5,7 @@
   "main": "src/js/navigation.js",
   "type": "module",
   "scripts": {
-    "test": "node --test tests/navigation.test.js"
+    "test": "node --test tests/*.test.js"
   },
   "keywords": ["wallet", "landing-page", "html5", "css3", "vanilla-js"],
   "author": "",
