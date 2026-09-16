@@ -5,7 +5,7 @@ type: epic
 description: "Core semantic layout, sticky top navigation header with mobile drawer, and comprehensive footer with social links and legal references for Rebirth Wallet landing page."
 tags: [marketing, landing-page, rebirth-wallet, navigation, footer]
 domain: "marketing"
-status: "📋 Planned"
+status: "✅ Done"
 priority: "High"
 estimated_stories: 2
 created: 2026-09-16
@@ -43,7 +43,7 @@ Establish the semantic HTML5 core page shell, sticky responsive navigation heade
 | Story | Status | Priority | Description |
 | ----- | ------ | -------- | ----------- |
 | 165.1 | ✅ Done | High | HTML5 Semantic Layout & Sticky Navigation Header |
-| 165.2 | 📝 Draft | Medium | Footer Sitemap, Social Icons & Copyright Section |
+| 165.2 | ✅ Done | Medium | Footer Sitemap, Social Icons & Copyright Section |
 
 ### Story 165.1: HTML5 Semantic Layout & Sticky Navigation Header
 
@@ -110,15 +110,16 @@ So that I can access community channels and legal terms.
 
 - **Started**: 2026-09-16
 - **Target**: 2026-09-23
-- **Completed**: [Date]
+- **Completed**: 2026-09-16
 
 **Story Completion**:
 
 - Story 165.1: ✅ Done
-- Story 165.2: 📝 Draft
+- Story 165.2: ✅ Done
 
 ## Change Log
 
 | Date | Version | Description | Author |
 | :--- | :--- | :--- | :--- |
 | 2026-09-16 | 1.0 | Initial draft | create-epic |
+| 2026-09-16 | 1.1 | All stories completed — epic accepted | develop-story |
