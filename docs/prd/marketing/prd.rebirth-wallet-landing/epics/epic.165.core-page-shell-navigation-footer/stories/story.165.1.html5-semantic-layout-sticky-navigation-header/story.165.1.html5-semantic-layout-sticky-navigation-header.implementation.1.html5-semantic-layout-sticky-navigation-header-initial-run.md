@@ -31,9 +31,9 @@ Build semantic HTML5 core page shell, sticky responsive navigation header with R
 
 | Step                        | Status     | Required Artifacts                                                                           | Notes | Subagent summary ref |
 | --------------------------- | ---------- | -------------------------------------------------------------------------------------------- | ----- | -------------------- |
-| 1. create-story-branch      | ⏳ Pending | Branch `feature/story.165.1.html5-semantic-layout-sticky-navigation-header` exists in git    |       | —                    |
-| 2. review-story             | ⏳ Pending | `story.165.1.html5-semantic-layout-sticky-navigation-header.review.1.html5-semantic-layout-sticky-navigation-header.md` exists (or skip logged) | | — |
-| 3. develop                  | ⏳ Pending | Story status == `Ready for Review`                                                           |       | —                    |
+| 1. create-story-branch      | ✅ Done    | Branch `feature/story.165.1.html5-semantic-layout-sticky-navigation-header` exists in git    | Branch created at `f9acdae` | — |
+| 2. review-story             | ✅ Done    | `story.165.1.html5-semantic-layout-sticky-navigation-header.review.1.html5-semantic-layout-sticky-navigation-header-initial-run.md` exists | Promoted Draft -> Ready for Development | — |
+| 3. develop                  | ✅ Done    | Story status == `Ready for Review`                                                           | All 3 tasks complete, tests 100% passing | — |
 | 4. create-pr                | ⏳ Pending | PR URL targets `develop` (or chosen base); issue/tracker comment posted                      |       | —                    |
 | 5–6. qa-story / qa-fix loop | ⏳ Pending | `story.165.1.html5-semantic-layout-sticky-navigation-header.qa.1.*.md`; `story.165.1.html5-semantic-layout-sticky-navigation-header.gate.1.*.yml`; `**PR Review**` row on the highest `### QA Cycle {N}` holds `APPROVE` or `CONCERNS` (Step 5c); PR comment posted | | — |
 | 7. finalise                 | ⏳ Pending | `story.165.1.html5-semantic-layout-sticky-navigation-header.dod.1.*.md`; story `status: accepted` | | — |

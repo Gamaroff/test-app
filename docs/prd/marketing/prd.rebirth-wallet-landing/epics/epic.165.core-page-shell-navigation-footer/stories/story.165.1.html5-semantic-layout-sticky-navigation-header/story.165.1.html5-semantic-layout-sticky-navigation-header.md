@@ -4,7 +4,7 @@ title: "HTML5 Semantic Layout & Sticky Navigation Header"
 type: story
 description: "Build semantic HTML5 core page shell, sticky responsive navigation header with Rebirth Wallet logo, section anchor links, CTA button, and mobile hamburger drawer."
 tags: [marketing, landing-page, navigation, header, layout]
-status: draft
+status: Ready for Review
 priority: High
 estimated_effort_hours: 2
 assignee: TBD
@@ -28,7 +28,7 @@ updated: 2026-09-16
 | Epic | [Epic 165: Core Page Shell, Navigation & Footer](../../epic.165.core-page-shell-navigation-footer.md) |
 | Priority | High |
 | Effort Estimate | 2h |
-| Status | Draft |
+| Status | Ready for Review |
 | GitHub Issue | [#2](https://github.com/Gamaroff/test-app/issues/2) |
 
 ## Acceptance Criteria
@@ -51,7 +51,7 @@ updated: 2026-09-16
 - No previous story exists in this epic (first story in Epic 165).
 
 ### Git History Insights
-- No prior commit history found (fresh git repository).
+- Initial commit created on `develop` branch.
 
 ### Data Models
 - No server or database models required for this static landing page shell.
@@ -77,9 +77,10 @@ updated: 2026-09-16
   - Focus trapping and Escape key handler for WCAG 2.1 AA accessibility compliance. [Source: docs/prd/marketing/prd.rebirth-wallet-landing/prd.rebirth-wallet-landing.md#section-22]
 
 ### File Locations
-- HTML document shell: `public/index.html` or `index.html` [Source: docs/architecture/concepts/source-tree.md]
-- Global & layout styles: `src/css/styles.css` or `styles.css`
-- Navigation JS module: `src/js/navigation.js` or `app.js`
+- HTML document shell: `index.html`
+- Global & layout styles: `src/css/styles.css`
+- Navigation JS module: `src/js/navigation.js`
+- Test suite: `tests/navigation.test.js`
 
 ### Testing Requirements
 - **Unit/DOM Tests**:
@@ -116,16 +117,16 @@ updated: 2026-09-16
 
 ## Tasks & Subtasks
 
-- [ ] **Task 1: HTML5 Semantic Document Shell & Navigation Markup**
-  - [ ] Create `index.html` with semantic `<header>`, `<nav>`, `<main>`, and empty target section stubs (`#features`, `#testimonials`, `#contact`, `#download`).
-  - [ ] Add logo link, navigation menu lists, and CTA button with accessible ARIA attributes.
-- [ ] **Task 2: CSS Layout, Sticky Header & Responsive Glassmorphism Styling**
-  - [ ] Define CSS custom properties for dark theme (#0B0F19 background, accent gradients, glassmorphism blur).
-  - [ ] Style sticky header bar (`position: sticky`, `top: 0`, `z-index: 1000`) and smooth scroll behavior (`html { scroll-behavior: smooth; }`).
-  - [ ] Style mobile navigation drawer and breakpoint media queries (`@media (max-width: 767px)`).
-- [ ] **Task 3: JavaScript Navigation Module & Mobile Drawer Toggle**
-  - [ ] Implement `src/js/navigation.js` to handle mobile drawer open/close toggling, `aria-expanded` updates, and Escape key dismissal.
-  - [ ] Implement smooth scrolling fallback/enhancement and active link highlighting on scroll.
+- [x] **Task 1: HTML5 Semantic Document Shell & Navigation Markup**
+  - [x] Create `index.html` with semantic `<header>`, `<nav>`, `<main>`, and empty target section stubs (`#features`, `#testimonials`, `#contact`, `#download`).
+  - [x] Add logo link, navigation menu lists, and CTA button with accessible ARIA attributes.
+- [x] **Task 2: CSS Layout, Sticky Header & Responsive Glassmorphism Styling**
+  - [x] Define CSS custom properties for dark theme (#0B0F19 background, accent gradients, glassmorphism blur).
+  - [x] Style sticky header bar (`position: sticky`, `top: 0`, `z-index: 1000`) and smooth scroll behavior (`html { scroll-behavior: smooth; }`).
+  - [x] Style mobile navigation drawer and breakpoint media queries (`@media (max-width: 767px)`).
+- [x] **Task 3: JavaScript Navigation Module & Mobile Drawer Toggle**
+  - [x] Implement `src/js/navigation.js` to handle mobile drawer open/close toggling, `aria-expanded` updates, and Escape key dismissal.
+  - [x] Implement smooth scrolling fallback/enhancement and active link highlighting on scroll.
 
 ## Dev Agent Record
 
